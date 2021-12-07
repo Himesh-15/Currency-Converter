@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>CURRENCY CONVERTER</TITLE>
+<STYLE>
+input[type="button"]{
+width: 110px; 
+margin-left: 0%;
+background: #ccddff;
+}
+input[type="text"]{
+  margin-left: 5%;	
+  width: 20%;
+  height: 20px;
+  font-weight: bold;
+}
+img{
+margin-left: 80%;
+width: 100%;
+height: 100%;
+}
+</STYLE>
+<SCRIPT>
+function convert(val){
+var x=document.getElementById('display1').value;
+if(val==1){
+document.getElementById('display2').value=x*0.0135;
+}
+else if(val==2){
+document.getElementById('display3').value=x*0.0098;
+}
+else if(val==3){
+document.getElementById('display4').value=x*0.0112;
+}
+else{
+document.getElementById('display5').value=x*0.0175;
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#6e7480">
+<H1><CENTER>CURRENCY CONVERTER</CENTER></H1>
+<BR><BR>
+<FORM>
+<DIV STYLE="margin-left: 30%; width: 100%;">
+<DIV STYLE="width: 4%; height: 30px; float:left;">
+<Img SRC="INDIA.PNG">
+</DIV>
+<DIV STYLE="margin-left: 0%;">
+<INPUT TYPE="TEXT" NAME="INDIA" ID="display1">
+<INPUT TYPE="BUTTON" NAME="RUPEE" VALUE="INDIAN &#8377">
+</DIV>
+<BR>
+<DIV STYLE="width: 4%; height: 30px; float:left;">
+<Img SRC="AMERICA.PNG">
+</DIV>
+<DIV STYLE="margin-left: 0%;">
+<INPUT TYPE="TEXT" NAME="AMERICA" ID="display2">
+<INPUT TYPE="BUTTON" NAME="DOLLAR" VALUE="AMERICAN &#36" ONCLICK="convert('1')">
+</DIV>
+<BR>
+<DIV STYLE="width: 4%; height: 30px; float:left;">
+<Img SRC="UK.PNG">
+</DIV>
+<DIV STYLE="margin-left: 0%;">
+<INPUT TYPE="TEXT" NAME="UK" ID="display3">
+<INPUT TYPE="BUTTON" NAME="POUND" VALUE="UK &#163" ONCLICK="convert('2')">
+</DIV>
+<BR>
+<DIV STYLE="width: 4%; height: 30px; float:left;">
+<Img SRC="EURO.PNG">
+</DIV>
+<DIV STYLE="margin-left: 0%;">
+<INPUT TYPE="TEXT" NAME="EURO" ID="display4">
+<INPUT TYPE="BUTTON" NAME="EURO" VALUE="EURO &#128" ONCLICK="convert('3')">
+</DIV>
+<BR>
+<DIV STYLE="width: 4%; height: 30px; float:left;">
+<Img SRC="AUSTRALIA.PNG">
+</DIV>
+<DIV STYLE="margin-left: 0%;">
+<INPUT TYPE="TEXT" NAME="AUSTRALIA" ID="display5">
+<INPUT TYPE="BUTTON" NAME="DOLLAR" VALUE="AUSTRALIAN &#36" ONCLICK="convert('4')">
+</DIV>
+<BR>
+</DIV>
+<BR>
+<CENTER><INPUT TYPE="RESET" VALUE="RESET" STYLE="width: 80px; height:20px"></CENTER>
+</FORM>
+</BODY>
+</HTML> 
